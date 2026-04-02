@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveEasy Car Rental | Booking</title>
+  <meta name="description" content="Book your rental car online with DriveEasy using our simple and interactive booking form.">
+  <meta name="keywords" content="book rental car, online car booking, car hire booking">
+  <meta name="author" content="Your Name">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container navbar">
+    <div class="logo">Drive<span>Easy</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cars.html">Cars</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h2>Book Your Rental Car</h2>
+
+    <form id="bookingForm">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="pickupDate">Pickup Date</label>
+      <input type="date" id="pickupDate" name="pickupDate" required onchange="calculatePrice()">
+
+      <label for="returnDate">Return Date</label>
+      <input type="date" id="returnDate" name="returnDate" required onchange="calculatePrice()">
+
+      <label for="carType">Car Type</label>
+      <select id="carType" name="carType" required onchange="calculatePrice()">
+        <option value="">Select a car</option>
+        <option value="Economy">Economy Sedan (€45/day)</option>
+        <option value="SUV">Family SUV (€75/day)</option>
+        <option value="Luxury">Luxury Car (€120/day)</option>
+      </select>
+
+      <label for="license">Driving License Number</label>
+      <input type="text" id="license" name="license" required>
+
+      <div class="checkbox-group">
+        <label><input type="checkbox" id="gps" onchange="calculatePrice()"> GPS (+€5/day)</label>
+        <label><input type="checkbox" id="seat" onchange="calculatePrice()"> Child Seat (+€4/day)</label>
+        <label><input type="checkbox" id="insurance" onchange="calculatePrice()"> Full Insurance (+€15/day)</label>
+      </div>
+
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" name="notes" placeholder="Any requests or special requirements?"></textarea>
+
+      <div class="checkbox-group">
+        <label><input type="checkbox" id="terms"> I agree to the booking terms and conditions</label>
+      </div>
+
+      <p id="totalPrice" class="form-message"></p>
+      <button type="submit" class="btn">Submit Booking</button>
+      <p id="formMessage" class="form-message"></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 DriveEasy Car Rental. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

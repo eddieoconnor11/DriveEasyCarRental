@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveEasy Car Rental | Cars</title>
+  <meta name="description" content="Browse the available DriveEasy rental cars including economy, SUV, and luxury vehicles.">
+  <meta name="keywords" content="rental cars, economy car, SUV rental, luxury rental car">
+  <meta name="author" content="Your Name">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container navbar">
+    <div class="logo">Drive<span>Easy</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cars.html" class="active">Cars</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h2>Choose Your Vehicle</h2>
+
+    <div class="filters">
+      <select id="filterType">
+        <option value="All">All Car Types</option>
+        <option value="Economy">Economy</option>
+        <option value="SUV">SUV</option>
+        <option value="Luxury">Luxury</option>
+      </select>
+
+      <select id="filterPrice">
+        <option value="all">All Prices</option>
+        <option value="under50">Under €50</option>
+        <option value="50to100">€50 to €100</option>
+        <option value="over100">Over €100</option>
+      </select>
+    </div>
+
+    <div class="cards">
+      <div class="card car-card" data-type="Economy" data-price="45">
+        <img src="images/sedan.jpg" alt="Economy sedan available for rent">
+        <div class="card-content">
+          <h3>Economy Sedan</h3>
+          <p>Fuel-efficient and ideal for city driving.</p>
+          <p class="price">€45 per day</p>
+        </div>
+      </div>
+
+      <div class="card car-card" data-type="SUV" data-price="75">
+        <img src="images/suv.jpg" alt="SUV available for rent">
+        <div class="card-content">
+          <h3>Family SUV</h3>
+          <p>Extra space for luggage and long-distance travel.</p>
+          <p class="price">€75 per day</p>
+        </div>
+      </div>
+
+      <div class="card car-card" data-type="Luxury" data-price="120">
+        <img src="images/luxury.jpg" alt="Luxury car available for rent">
+        <div class="card-content">
+          <h3>Luxury Car</h3>
+          <p>Elegant style with premium comfort features.</p>
+          <p class="price">€120 per day</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 DriveEasy Car Rental. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
